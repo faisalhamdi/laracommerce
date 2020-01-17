@@ -8,7 +8,7 @@
 
         <li class="nav-title">PRODUCT MANAGEMENT</li>
         <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="{{ route('categories.index') }}">
                 <i class="nav-icon icon-drop"></i> Category
             </a>
         </li>
