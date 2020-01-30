@@ -37,4 +37,9 @@ class Category extends Model
     public function getNameAttribute($value) {
         return ucfirst($value);
     }
+
+    public function product() 
+    {
+        return $this->hasMany(Product::class);
+    }
 }

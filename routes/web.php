@@ -21,4 +21,9 @@ Route::group(['prefix' => 'administrator', 'middleware' => 'auth'], function() {
     Route::get('/home', 'HomeController@index')->name('home');
 
     Route::resource('categories', 'CategoryController')->except(['create', 'show']);
+
+    Route::resource('products', 'ProductController');
 });
+
+Route::get('/user', 'UserController@index');
+Route::get('/user/{params}', 'UserController@show');
