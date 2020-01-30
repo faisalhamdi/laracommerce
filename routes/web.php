@@ -24,3 +24,6 @@ Route::group(['prefix' => 'administrator', 'middleware' => 'auth'], function() {
 
     Route::resource('products', 'ProductController');
 });
+
+Route::get('/user', 'UserController@index');
+Route::get('/user/{params}', 'UserController@show');
