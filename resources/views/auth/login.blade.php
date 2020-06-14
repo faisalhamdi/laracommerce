@@ -23,27 +23,34 @@
                                     </span>
                                 </div>
                               
-                              	<!-- $errors->has('email') AKAN MENGECEK JIKA ADA ERROR DARI HASIL VALIDASI LARAVEL, SEMUA KEGAGALAN VALIDASI LARAVEL AKAN DISIMPAN KEDALAM VARIABLE $errors -->
-                                <input class="form-control {{ $errors->has('email') ? ' is-invalid' : '' }}" 
+                                  <!-- $errors->has('email') AKAN MENGECEK JIKA ADA ERROR DARI HASIL VALIDASI LARAVEL, SEMUA KEGAGALAN VALIDASI LARAVEL AKAN DISIMPAN KEDALAM VARIABLE $errors -->
+                                <div>
+                                    <input class="form-control {{ $errors->has('email') ? ' is-invalid' : '' }}" 
                                     type="text" 
                                     name="email"
                                     placeholder="Email Address" 
                                     value="{{ old('email') }}" 
                                     autofocus 
                                     required>
-                            </div>
-                            <div class="input-group mb-4">
+                                </div>
+                            </div>  
+                                <div class="input-group mb-4">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">
                                         <i class="icon-lock"></i>
                                     </span>
                                 </div>
-                                <input class="form-control {{ $errors->has('email') ? ' is-invalid' : '' }}" 
+                                <div>
+                                    <input class="form-control {{ $errors->has('email') ? ' is-invalid' : '' }}" 
                                     type="password" 
                                     name="password"
                                     placeholder="Password" 
+                                    id="password-field"
                                     required>
+                                    <div toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password" style="float:right;margin-top:-22px;padding-right:24px;"></div>
+                                </div>
                             </div>
+                                
                             <div class="row">
                                 @if (session('error'))
                                 <div class="col-md-12">
