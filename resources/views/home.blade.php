@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('title')
-    <title>Dashboard</title>
+    <title>HPS Store</title>
 @endsection
 
 @section('content')
